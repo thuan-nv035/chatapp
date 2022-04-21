@@ -6,10 +6,9 @@ const Login = () => {
     const [password, setPassword] = useState('')
     // const [error, setError] = useState('')
     async function handleSubmit1() {
-        const res = await authService.Login({email: email,password: password})
-            const token = res.data.token
-            const data = (jwt_decode(token))
-            console.log(data)
+        await authService.Login({email: email,password: password})
+            // const token = res.data.token
+            // console.log(data)
             // console.log(res);
             alert("Dang nhap thanh cong")   
     }
@@ -20,8 +19,8 @@ const Login = () => {
         try {
             const res = await authService.Login({email: email,password: password})
             const token = res.data.token
-            const data = (jwt_decode(token))
-            console.log(data)
+            // const data = (jwt_decode(token))
+            // console.log(data)
             // console.log(res);
             alert("Dang nhap thanh cong")
 
